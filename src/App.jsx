@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from './components/header/Navbar';
 import Grid from "@mui/material/Grid";
 import Map from './components/map/Map';
+import List from './components/list/List';
+
 const App = () => {
     return (
       <React.Fragment>
@@ -11,7 +13,7 @@ const App = () => {
             <Map />
           </Grid>
           <Grid item xs={12} md={4} sm={6}>
-            
+            <List />
           </Grid>
         </Grid>
       </React.Fragment>
