@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from './components/header/Navbar';
 import Grid from "@mui/material/Grid";
 import Map from './components/map/Map';
 import List from './components/list/List';
+import Restaurants from './components/api/Restaurants';
 
 const App = () => {
-    return (
+    useEffect(()=>{
+        Restaurants().then((data)=>{
+            console.log(data);
+        })
+    },[]);
+    return(
       <React.Fragment>
         <Navbar />
         <Grid container>
